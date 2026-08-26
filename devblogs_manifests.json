@@ -1,0 +1,782 @@
+[
+  {
+    "id": 301,
+    "title": "Devblog 301",
+    "version": "v2602",
+    "releaseDate": "02.10.2025",
+    "client": [
+      {
+        "depotId": 252495,
+        "manifestId": "4416693356279399220",
+        "label": "Rust Content"
+      },
+      {
+        "depotId": 252494,
+        "manifestId": "4816143646136524351",
+        "label": "Rust Executable"
+      }
+    ],
+    "serverWindows": [
+      {
+        "depotId": 258551,
+        "manifestId": "1021021017075539798",
+        "label": "Server Win x64"
+      },
+      {
+        "depotId": 258554,
+        "manifestId": "7800489136632237329",
+        "label": "Server Content"
+      }
+    ]
+  },
+  {
+    "id": 299,
+    "title": "Devblog 299",
+    "version": "v2594",
+    "releaseDate": "07.08.2025",
+    "client": [
+      {
+        "depotId": 252495,
+        "manifestId": "3715744439160106772",
+        "label": "Rust Content"
+      },
+      {
+        "depotId": 252494,
+        "manifestId": "8793341769078439703",
+        "label": "Rust Executable"
+      }
+    ],
+    "serverWindows": [
+      {
+        "depotId": 258551,
+        "manifestId": "4691522389441303606",
+        "label": "Server Win x64"
+      },
+      {
+        "depotId": 258554,
+        "manifestId": "4578281456729866300",
+        "label": "Server Content"
+      }
+    ]
+  },
+  {
+    "id": 297,
+    "title": "Devblog 297",
+    "version": "v2592",
+    "releaseDate": "03.07.2025",
+    "client": [
+      {
+        "depotId": 252495,
+        "manifestId": "4063535500540036132",
+        "label": "Rust Content"
+      },
+      {
+        "depotId": 252494,
+        "manifestId": "2134704175811384720",
+        "label": "Rust Executable"
+      }
+    ],
+    "serverWindows": [
+      {
+        "depotId": 258551,
+        "manifestId": "3424665508261754630",
+        "label": "Server Win x64"
+      },
+      {
+        "depotId": 258554,
+        "manifestId": "6356552833801906345",
+        "label": "Server Content"
+      }
+    ]
+  },
+  {
+    "id": 295,
+    "title": "Devblog 295",
+    "version": "v2580",
+    "releaseDate": "06.02.2025",
+    "client": [
+      {
+        "depotId": 252495,
+        "manifestId": "6971406074665383482",
+        "label": "Rust Content"
+      },
+      {
+        "depotId": 252494,
+        "manifestId": "6237166519664317351",
+        "label": "Rust Executable"
+      }
+    ],
+    "serverWindows": [
+      {
+        "depotId": 258551,
+        "manifestId": "3887947441418003849",
+        "label": "Server Win x64"
+      },
+      {
+        "depotId": 258554,
+        "manifestId": "8648086317383607729",
+        "label": "Server Content"
+      }
+    ]
+  },
+  {
+    "id": 292,
+    "title": "Devblog 292",
+    "version": "v2574",
+    "releaseDate": "23.01.2025",
+    "client": [
+      {
+        "depotId": 252495,
+        "manifestId": "5465071456681086489",
+        "label": "Rust Content"
+      },
+      {
+        "depotId": 252494,
+        "manifestId": "1701770404083455481",
+        "label": "Rust Executable"
+      }
+    ],
+    "serverWindows": [
+      {
+        "depotId": 258551,
+        "manifestId": "7586335893180490615",
+        "label": "Server Win x64"
+      },
+      {
+        "depotId": 258554,
+        "manifestId": "2489285884986109775",
+        "label": "Server Content"
+      }
+    ]
+  },
+  {
+    "id": 290,
+    "title": "Devblog 290",
+    "version": "v2570",
+    "releaseDate": "05.12.2024",
+    "client": [
+      {
+        "depotId": 252495,
+        "manifestId": "3303092237848210131",
+        "label": "Rust Content"
+      },
+      {
+        "depotId": 252494,
+        "manifestId": "1788204873881687028",
+        "label": "Rust Executable"
+      }
+    ],
+    "serverWindows": [
+      {
+        "depotId": 258551,
+        "manifestId": "3604119712284818559",
+        "label": "Server Win x64"
+      },
+      {
+        "depotId": 258554,
+        "manifestId": "1683559528736641086",
+        "label": "Server Content"
+      }
+    ]
+  },
+  {
+    "id": 287,
+    "title": "Devblog 287",
+    "version": "v2567",
+    "releaseDate": "07.11.2024",
+    "client": [
+      {
+        "depotId": 252495,
+        "manifestId": "1365024171762175667",
+        "label": "Rust Content"
+      },
+      {
+        "depotId": 252494,
+        "manifestId": "4555026184976020707",
+        "label": "Rust Executable"
+      }
+    ],
+    "serverWindows": [
+      {
+        "depotId": 258551,
+        "manifestId": "29462869521327376",
+        "label": "Server Win x64"
+      },
+      {
+        "depotId": 258554,
+        "manifestId": "5574379612815873296",
+        "label": "Server Content"
+      }
+    ]
+  },
+  {
+    "id": 280,
+    "title": "Devblog 280",
+    "version": "v2398",
+    "releaseDate": "06.07.2023",
+    "client": [
+      {
+        "depotId": 252495,
+        "manifestId": "7517967092170946419",
+        "label": "Rust Content"
+      },
+      {
+        "depotId": 252494,
+        "manifestId": "1777641625544858501",
+        "label": "Rust Executable"
+      }
+    ],
+    "serverWindows": [
+      {
+        "depotId": 258551,
+        "manifestId": "6742168151988093956",
+        "label": "Server Win x64"
+      },
+      {
+        "depotId": 258554,
+        "manifestId": "3156696458161563140",
+        "label": "Server Content"
+      }
+    ]
+  },
+  {
+    "id": 277,
+    "title": "Devblog 277",
+    "version": "v2392",
+    "releaseDate": "01.06.2023",
+    "client": [
+      {
+        "depotId": 252495,
+        "manifestId": "3444346980629669094",
+        "label": "Rust Content"
+      },
+      {
+        "depotId": 252494,
+        "manifestId": "2541365159433812667",
+        "label": "Rust Executable"
+      }
+    ],
+    "serverWindows": [
+      {
+        "depotId": 258551,
+        "manifestId": "7251289959338928249",
+        "label": "Server Win x64"
+      },
+      {
+        "depotId": 258554,
+        "manifestId": "2903091549176777020",
+        "label": "Server Content"
+      }
+    ]
+  },
+  {
+    "id": 266,
+    "title": "Devblog 266",
+    "version": "v2388",
+    "releaseDate": "04.05.2023",
+    "client": [
+      {
+        "depotId": 252495,
+        "manifestId": "1919607204452469545",
+        "label": "Rust Content"
+      },
+      {
+        "depotId": 252494,
+        "manifestId": "3408792150962438895",
+        "label": "Rust Executable"
+      }
+    ],
+    "serverWindows": [
+      {
+        "depotId": 258551,
+        "manifestId": "4681818100412413194",
+        "label": "Server Win x64"
+      },
+      {
+        "depotId": 258554,
+        "manifestId": "6938301573081959130",
+        "label": "Server Content"
+      }
+    ]
+  },
+  {
+    "id": 265,
+    "title": "Devblog 265",
+    "version": "v2377",
+    "releaseDate": "02.03.2023",
+    "client": [
+      {
+        "depotId": 252495,
+        "manifestId": "7302086296900720569",
+        "label": "Rust Content"
+      },
+      {
+        "depotId": 252494,
+        "manifestId": "842283549110308780",
+        "label": "Rust Executable"
+      }
+    ],
+    "serverWindows": [
+      {
+        "depotId": 258551,
+        "manifestId": "4829571540138155148",
+        "label": "Server Win x64"
+      },
+      {
+        "depotId": 258554,
+        "manifestId": "3353088463860743462",
+        "label": "Server Content"
+      }
+    ]
+  },
+  {
+    "id": 264,
+    "title": "Devblog 264",
+    "version": "v2370",
+    "releaseDate": "02.02.2023",
+    "client": [
+      {
+        "depotId": 252495,
+        "manifestId": "5444669099736419111",
+        "label": "Rust Content"
+      },
+      {
+        "depotId": 252494,
+        "manifestId": "6247199584662595103",
+        "label": "Rust Executable"
+      }
+    ],
+    "serverWindows": [
+      {
+        "depotId": 258551,
+        "manifestId": "8530792074324590657",
+        "label": "Server Win x64"
+      },
+      {
+        "depotId": 258554,
+        "manifestId": "6509434444576664711",
+        "label": "Server Content"
+      }
+    ]
+  },
+  {
+    "id": 261,
+    "title": "Devblog 261",
+    "version": "v2332",
+    "releaseDate": "07.04.2022",
+    "client": [
+      {
+        "depotId": 252495,
+        "manifestId": "6511542711425244729",
+        "label": "Rust Content"
+      },
+      {
+        "depotId": 252494,
+        "manifestId": "2826153980842130154",
+        "label": "Rust Executable"
+      }
+    ],
+    "serverWindows": [
+      {
+        "depotId": 258551,
+        "manifestId": "4000557949315425516",
+        "label": "Server Win x64"
+      },
+      {
+        "depotId": 258554,
+        "manifestId": "9080219904825272632",
+        "label": "Server Content"
+      }
+    ]
+  },
+  {
+    "id": 248,
+    "title": "Devblog 248",
+    "version": "v2301",
+    "releaseDate": "06.05.2021",
+    "client": [
+      {
+        "depotId": 252495,
+        "manifestId": "4746887374949251340",
+        "label": "Rust Content"
+      },
+      {
+        "depotId": 252494,
+        "manifestId": "6955200604060851353",
+        "label": "Rust Executable"
+      }
+    ],
+    "serverWindows": [
+      {
+        "depotId": 258551,
+        "manifestId": "5226442379699449696",
+        "label": "Server Win x64"
+      },
+      {
+        "depotId": 258554,
+        "manifestId": "6870441081557997423",
+        "label": "Server Content"
+      }
+    ]
+  },
+  {
+    "id": 247,
+    "title": "Devblog 247",
+    "version": "v2293",
+    "releaseDate": "01.04.2021",
+    "client": [
+      {
+        "depotId": 252495,
+        "manifestId": "348236136220284344",
+        "label": "Rust Content"
+      },
+      {
+        "depotId": 252494,
+        "manifestId": "7788898182701923672",
+        "label": "Rust Executable"
+      }
+    ],
+    "serverWindows": [
+      {
+        "depotId": 258551,
+        "manifestId": "1680681200883117663",
+        "label": "Server Win x64"
+      },
+      {
+        "depotId": 258554,
+        "manifestId": "2505480358621067699",
+        "label": "Server Content"
+      }
+    ]
+  },
+  {
+    "id": 240,
+    "title": "Devblog 240",
+    "version": "v2283",
+    "releaseDate": "04.03.2021",
+    "client": [
+      {
+        "depotId": 252495,
+        "manifestId": "6588092414346855827",
+        "label": "Rust Content"
+      },
+      {
+        "depotId": 252494,
+        "manifestId": "5170085988979167056",
+        "label": "Rust Executable"
+      }
+    ],
+    "serverWindows": [
+      {
+        "depotId": 258551,
+        "manifestId": "3185768740838577020",
+        "label": "Server Win x64"
+      },
+      {
+        "depotId": 258554,
+        "manifestId": "4143907008096394712",
+        "label": "Server Content"
+      }
+    ]
+  },
+  {
+    "id": 236,
+    "title": "Devblog 236",
+    "version": "v2271",
+    "releaseDate": "03.12.2020",
+    "client": [
+      {
+        "depotId": 252495,
+        "manifestId": "6359488678146525992",
+        "label": "Rust Content"
+      },
+      {
+        "depotId": 252494,
+        "manifestId": "1724503696383038007",
+        "label": "Rust Executable"
+      }
+    ],
+    "serverWindows": [
+      {
+        "depotId": 258551,
+        "manifestId": "4205531530436009447",
+        "label": "Server Win x64"
+      },
+      {
+        "depotId": 258554,
+        "manifestId": "2243994564188325488",
+        "label": "Server Content"
+      }
+    ]
+  },
+  {
+    "id": 224,
+    "title": "Devblog 224",
+    "version": "v2215",
+    "releaseDate": "06.02.2020",
+    "client": [
+      {
+        "depotId": 252495,
+        "manifestId": "8980514435703728862",
+        "label": "Rust Content"
+      },
+      {
+        "depotId": 252494,
+        "manifestId": "4931154401135127611",
+        "label": "Rust Executable"
+      }
+    ],
+    "serverWindows": [
+      {
+        "depotId": 258551,
+        "manifestId": "7377373544229186547",
+        "label": "Server Win x64"
+      },
+      {
+        "depotId": 258554,
+        "manifestId": "1085230729601995503",
+        "label": "Server Content"
+      }
+    ]
+  },
+  {
+    "id": 220,
+    "title": "Devblog 220",
+    "version": "v2201",
+    "releaseDate": "07.11.2019",
+    "client": [
+      {
+        "depotId": 252495,
+        "manifestId": "6523830201429967029",
+        "label": "Rust Content"
+      },
+      {
+        "depotId": 252494,
+        "manifestId": "465514303552168456",
+        "label": "Rust Executable"
+      }
+    ],
+    "serverWindows": [
+      {
+        "depotId": 258551,
+        "manifestId": "5274601782433685066",
+        "label": "Server Win x64"
+      },
+      {
+        "depotId": 258554,
+        "manifestId": "810189921484989258",
+        "label": "Server Content"
+      }
+    ]
+  },
+  {
+    "id": 217,
+    "title": "Devblog 217",
+    "version": "v2183",
+    "releaseDate": "01.08.2019",
+    "client": [
+      {
+        "depotId": 252495,
+        "manifestId": "5963398435027743481",
+        "label": "Rust Content"
+      },
+      {
+        "depotId": 252494,
+        "manifestId": "8234461438389052725",
+        "label": "Rust Executable"
+      }
+    ],
+    "serverWindows": [
+      {
+        "depotId": 258551,
+        "manifestId": "6893659423357099067",
+        "label": "Server Win x64"
+      },
+      {
+        "depotId": 258554,
+        "manifestId": "862846285559986990",
+        "label": "Server Content"
+      }
+    ]
+  },
+  {
+    "id": 210,
+    "title": "Devblog 210",
+    "version": "v2151",
+    "releaseDate": "07.02.2019",
+    "client": [
+      {
+        "depotId": 252495,
+        "manifestId": "4482473459608243906",
+        "label": "Rust Content"
+      },
+      {
+        "depotId": 252494,
+        "manifestId": "3123129822101471198",
+        "label": "Rust Executable"
+      }
+    ],
+    "serverWindows": [
+      {
+        "depotId": 258551,
+        "manifestId": "5202757130691551218",
+        "label": "Server Win x64"
+      },
+      {
+        "depotId": 258554,
+        "manifestId": "447586385338600633",
+        "label": "Server Content"
+      }
+    ]
+  },
+  {
+    "id": 199,
+    "title": "Devblog 199",
+    "version": "v2081",
+    "releaseDate": "05.04.2018",
+    "client": [
+      {
+        "depotId": 252495,
+        "manifestId": "8294130072040609864",
+        "label": "Rust Content"
+      },
+      {
+        "depotId": 252494,
+        "manifestId": "7287300143467377410",
+        "label": "Rust Executable"
+      }
+    ],
+    "serverWindows": [
+      {
+        "depotId": 258551,
+        "manifestId": "1136164812490466117",
+        "label": "Server Win x64"
+      },
+      {
+        "depotId": 258554,
+        "manifestId": "6093546884420686704",
+        "label": "Server Content"
+      }
+    ]
+  },
+  {
+    "id": 196,
+    "title": "Devblog 196",
+    "version": "v2054",
+    "releaseDate": "01.02.2018",
+    "client": [
+      {
+        "depotId": 252495,
+        "manifestId": "3496034709698234027",
+        "label": "Rust Content"
+      },
+      {
+        "depotId": 252494,
+        "manifestId": "7648931322855505737",
+        "label": "Rust Executable"
+      }
+    ],
+    "serverWindows": [
+      {
+        "depotId": 258551,
+        "manifestId": "300803357469538946",
+        "label": "Server Win x64"
+      },
+      {
+        "depotId": 258554,
+        "manifestId": "1322930226920703791",
+        "label": "Server Content"
+      }
+    ]
+  },
+  {
+    "id": 177,
+    "title": "Devblog 177",
+    "version": "v2013",
+    "releaseDate": "14.09.2017",
+    "client": [
+      {
+        "depotId": 252495,
+        "manifestId": "29188748842907684",
+        "label": "Rust Content"
+      },
+      {
+        "depotId": 252494,
+        "manifestId": "7509419689742128941",
+        "label": "Rust Executable"
+      }
+    ],
+    "serverWindows": [
+      {
+        "depotId": 258551,
+        "manifestId": "4394758456253204934",
+        "label": "Server Win x64"
+      },
+      {
+        "depotId": 258554,
+        "manifestId": "5367839380001340264",
+        "label": "Server Content"
+      }
+    ]
+  },
+  {
+    "id": 133,
+    "title": "Devblog 133",
+    "version": "v1806 (Old Blueprint Era)",
+    "releaseDate": "27.10.2016",
+    "client": [
+      {
+        "depotId": 252495,
+        "manifestId": "4682077113322583976",
+        "label": "Rust Content"
+      },
+      {
+        "depotId": 252494,
+        "manifestId": "3509908398283860043",
+        "label": "Rust Executable"
+      }
+    ],
+    "serverWindows": [
+      {
+        "depotId": 258551,
+        "manifestId": "3471418522324482926",
+        "label": "Server Win x64"
+      },
+      {
+        "depotId": 258554,
+        "manifestId": "6665591592489713100",
+        "label": "Server Content"
+      }
+    ]
+  },
+  {
+    "id": 65,
+    "title": "Devblog 65",
+    "version": "v1695 (Legacy Rust Classic)",
+    "releaseDate": "01.09.2016",
+    "client": [
+      {
+        "depotId": 252495,
+        "manifestId": "2205013419465549186",
+        "label": "Rust Content"
+      },
+      {
+        "depotId": 252494,
+        "manifestId": "3150957458736812950",
+        "label": "Rust Executable"
+      }
+    ],
+    "serverWindows": [
+      {
+        "depotId": 258551,
+        "manifestId": "5280465317626182394",
+        "label": "Server Win x64"
+      },
+      {
+        "depotId": 258554,
+        "manifestId": "6895785912482287582",
+        "label": "Server Content"
+      }
+    ]
+  }
+]
