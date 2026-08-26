@@ -1,4 +1,4 @@
-param(
+﻿param(
     [int]$DevblogId = 0,
     [string]$OutputDir = ""
 )
@@ -20,17 +20,14 @@ $tar = Get-Command "tar.exe" -ErrorAction SilentlyContinue
 
 function Pack-FolderToZip($sourceFolder, $outputZip) {
     if (-not (Test-Path $sourceFolder)) {
-        Write-Host "  [!] Папка не найдена: $sourceFolder" -ForegroundColor Yellow
+        Write-Host "  [!] Directory not found: $sourceFolder" -ForegroundColor Yellow
         return $false
     }
     
-    Write-Host "  -> Создание архива: $outputZip..." -ForegroundColor Cyan
+    Write-Host "  -> Creating archive: $outputZip..." -ForegroundColor Cyan
     if (Test-Path $outputZip) { Remove-Item -Path $outputZip -Force }
 
     if ($tar) {
-        # Using built-in tar for fast multithreaded zip creation
-        $parent = Split-Path $sourceFolder -Parent
-        $leaf = Split-Path $sourceFolder -Leaf
         & $tar -a -cf "$outputZip" -C "$sourceFolder" .
     } else {
         Add-Type -AssemblyName System.IO.Compression.FileSystem
@@ -39,26 +36,26 @@ function Pack-FolderToZip($sourceFolder, $outputZip) {
 
     if (Test-Path $outputZip) {
         $sizeMb = [math]::Round((Get-Item $outputZip).Length / 1MB, 2)
-        Write-Host "  [OK] Архив готов ($sizeMb MB): $outputZip" -ForegroundColor Green
+        Write-Host "  [OK] Archive ready ($sizeMb MB): $outputZip" -ForegroundColor Green
         return $true
     }
     return $false
 }
 
 Write-Host "=================================================================" -ForegroundColor Cyan
-Write-Host " Rust Vanilla Devblogs: Утилита упаковки для Google Drive" -ForegroundColor Cyan
+Write-Host " Rust Vanilla Devblogs: Google Drive Packager" -ForegroundColor Cyan
 Write-Host "=================================================================" -ForegroundColor Cyan
-Write-Host "Папка для сохранения архивов: $OutputDir" -ForegroundColor White
+Write-Host "Output directory: $OutputDir" -ForegroundColor White
 Write-Host ""
 
 $targets = @()
 if ($DevblogId -gt 0) {
     $targets = $devblogs | Where-Object { $_.id -eq $DevblogId }
 } else {
-    Write-Host "Выберите вариант упаковки:" -ForegroundColor Yellow
-    Write-Host " [0] Упаковать ВСЕ доступные девблоги" -ForegroundColor White
-    Write-Host " [Или введите номер девблога, например: 65, 133, 280]" -ForegroundColor White
-    $choice = Read-Host "Ваш выбор [0]"
+    Write-Host "Select packaging option:" -ForegroundColor Yellow
+    Write-Host " [0] Pack ALL devblogs" -ForegroundColor White
+    Write-Host " [Or enter devblog number, e.g. 65, 133, 280]" -ForegroundColor White
+    $choice = Read-Host "Your choice [0]"
     if ([string]::IsNullOrWhiteSpace($choice) -or $choice -eq "0") {
         $targets = $devblogs
     } else {
@@ -70,7 +67,7 @@ if ($DevblogId -gt 0) {
 }
 
 if ($targets.Count -eq 0) {
-    Write-Host "[!] Нет выбранных девблогов для упаковки." -ForegroundColor Red
+    Write-Host "[!] No devblogs selected for packaging." -ForegroundColor Red
     exit 0
 }
 
@@ -86,7 +83,7 @@ foreach ($db in $targets) {
 
     Write-Host ""
     Write-Host "=================================================================" -ForegroundColor Cyan
-    Write-Host " [$current/$total] Упаковка $($db.title) ($($db.version))..." -ForegroundColor Green
+    Write-Host " [$current/$total] Packing $($db.title) ($($db.version))..." -ForegroundColor Green
     Write-Host "=================================================================" -ForegroundColor Cyan
 
     # Pack Server
@@ -94,7 +91,7 @@ foreach ($db in $targets) {
     if (Test-Path (Join-Path $serverFolder "RustDedicated.exe")) {
         Pack-FolderToZip $serverFolder $serverZip
     } else {
-        Write-Host "  [-] Серверные файлы для Devblog $id не найдены в $serverFolder (пропуск)." -ForegroundColor DarkGray
+        Write-Host "  [-] Server files for Devblog $id not found in $serverFolder (skipping)." -ForegroundColor DarkGray
     }
 
     # Pack Client
@@ -102,13 +99,12 @@ foreach ($db in $targets) {
     if ((Test-Path (Join-Path $clientFolder "RustClient.exe")) -or (Test-Path (Join-Path $clientFolder "Rust.exe"))) {
         Pack-FolderToZip $clientFolder $clientZip
     } else {
-        Write-Host "  [-] Клиентские файлы для Devblog $id не найдены в $clientFolder (пропуск)." -ForegroundColor DarkGray
+        Write-Host "  [-] Client files for Devblog $id not found in $clientFolder (skipping)." -ForegroundColor DarkGray
     }
 }
 
 Write-Host ""
 Write-Host "=================================================================" -ForegroundColor Green
-Write-Host " Все готовые архивы сохранены в: $OutputDir" -ForegroundColor Green
-Write-Host " Теперь загрузите эти zip-файлы на ваш Google Drive," -ForegroundColor White
-Write-Host " сделайте ссылку 'Доступ по ссылке (Читатель)' и вставьте ID в gdrive_links.json!" -ForegroundColor Cyan
+Write-Host " All archives created in: $OutputDir" -ForegroundColor Green
+Write-Host " Upload these zip files to Google Drive and update gdrive_links.json!" -ForegroundColor Cyan
 Write-Host "=================================================================" -ForegroundColor Green
