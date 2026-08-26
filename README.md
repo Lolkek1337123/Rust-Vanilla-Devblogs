@@ -5,22 +5,23 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
 [![Facepunch: Compliant](https://img.shields.io/badge/Facepunch-Fair%20Use%20Compliant-brightgreen?style=for-the-badge&logo=shield)](LEGAL_NOTICE.md)
+[![Google Drive: Supported](https://img.shields.io/badge/Google%20Drive-1--Click%20Download-4285F4?style=for-the-badge&logo=googledrive)](download_from_gdrive.ps1)
 [![Devblogs: 26 Versions](https://img.shields.io/badge/Devblogs-65%20to%20301-orange?style=for-the-badge&logo=rust)](devblogs_manifests.json)
 [![SteamCMD: Integrated](https://img.shields.io/badge/SteamCMD-Automated-blue?style=for-the-badge&logo=steam)](https://developer.valvesoftware.com/wiki/SteamCMD)
 [![Platform: Windows](https://img.shields.io/badge/Platform-Windows%20x64-informational?style=for-the-badge&logo=windows)](https://microsoft.com)
 
 <p align="center">
-  <b>Универсальный инструмент для автоматической загрузки, развёртывания и локального запуска 26 легендарных версий игры Rust (Devblog 65 – Devblog 301) напрямую из официальных депотов Steam.</b>
+  <b>Универсальный инструмент для автоматической загрузки, развёртывания и локального запуска 26 легендарных версий игры Rust (Devblog 65 – Devblog 301) напрямую из официальных депотов Steam или через скоростные зеркала Google Drive.</b>
 </p>
 
-[📌 О проекте](#-о-проекте) • [🛡️ Юридический дисклеймер](#️-юридический-дисклеймер--legal-disclaimer) • [🚀 Быстрый старт](#-быстрый-старт) • [📊 База девблогов](#-полная-база-девблогов-65--301) • [⚙️ Конфигурация](#️-параметры-запуска-и-rcon) • [❓ FAQ](#-часто-задаваемые-вопросы-faq)
+[📌 О проекте](#-о-проекте) • [☁️ Google Drive Загрузка](#️-загрузка-готовых-сборок-из-google-drive-1-click-ready) • [🛡️ Юридический дисклеймер](#️-юридический-дисклеймер--legal-disclaimer) • [🚀 Быстрый старт (SteamCMD)](#-быстрый-старт-steamcmd) • [📊 База девблогов](#-полная-база-девблогов-65--301) • [⚙️ Конфигурация](#️-параметры-запуска-и-rcon) • [❓ FAQ](#-часто-задаваемые-вопросы-faq)
 
 ---
 
 </div>
 
 > [!IMPORTANT]
-> **100% Legal & Safe**: Репозиторий **НЕ содержит** бинарных файлов игры (`.exe`, `.dll`) или ассетов Unity. Все файлы загружаются пользователем напрямую с официальных серверов Valve (Steam Content Delivery Network) с помощью легитимных инструментов (`SteamCMD`, `DepotDownloader`).
+> **100% Legal & Safe**: Репозиторий **НЕ содержит** бинарных файлов игры (`.exe`, `.dll`) или ассетов Unity в самом Git. Все файлы загружаются пользователем самостоятельно напрямую с официальных серверов Valve (Steam Content Delivery Network) или с настроенных зеркал Google Drive.
 
 ---
 
@@ -34,12 +35,36 @@
 - ⚡ **Новейшая эпоха (Devblog 247 – 301)** — современный HDRP-рендеринг, подводные лаборатории, поезда, вертолеты и актуальный сетевой стек.
 
 ### ✨ Ключевые возможности:
-- ⚡ **1-Click Downloader (`download_servers.ps1`)**: Интерактивный загрузчик серверов через SteamCMD с автоматической установкой SteamCMD при отсутствии.
+- ☁️ **Google Drive 1-Click Downloader (`download_from_gdrive.ps1` / `download_from_gdrive.bat`)**: Мгновенное скачивание полностью готовых, упакованных сборок без необходимости вводить Steam-аккаунт.
+- ⚡ **SteamCMD Downloader (`download_servers.ps1`)**: Интерактивный загрузчик серверов через официальный SteamCMD с автоматической установкой SteamCMD.
 - 🎮 **Client Downloader (`download_all_clients_powershell.ps1`)**: Безопасный загрузчик клиентских депотов через DepotDownloader без хранения паролей.
 - 📦 **Полная база манифестов (`devblogs_manifests.json`)**: 26 верифицированных пар депотов (AppID 258550 для серверов, AppID 252490 для клиентов).
 - 🚀 **Готовые скрипты запуска**: Индивидуальные `Start_Server.bat` и `Start_Client.bat` для каждого девблога с оптимальными портами, RCON и параметрами EAC.
 - 🔄 **Автоматическое слияние (`fast_merge_servers.ps1`)**: Многопоточная сборка скачанных депотов через Robocopy.
-- 📋 **Консольные команды (`all_devblogs_steam_commands.txt`)**: Полный список команд для загрузки через Steam Console.
+- 🗜️ **Утилита упаковки (`pack_devblogs_for_upload.ps1`)**: Быстрое сжатие локальных сборок в ZIP для выгрузки на свой Google Диск.
+
+---
+
+## ☁️ Загрузка готовых сборок из Google Drive (1-Click Ready)
+
+Если вы не хотите ждать скачивания через SteamCMD, в репозитории предусмотрен автоматический загрузчик готовых архивов серверов и клиентов из **Google Drive**:
+
+```bat
+# Запуск через Windows BAT (в 1 клик):
+download_from_gdrive.bat
+
+# Или через PowerShell:
+powershell -ExecutionPolicy Bypass -File .\download_from_gdrive.ps1
+```
+
+### Как настроить свои ссылки Google Drive:
+1. Упакуйте нужный девблог с помощью команды:
+   ```powershell
+   powershell -ExecutionPolicy Bypass -File .\pack_devblogs_for_upload.ps1 -DevblogId 133
+   ```
+2. Загрузите созданный `.zip` файл из папки `_gdrive_uploads\` на свой Google Диск.
+3. Откройте доступ к файлу («Доступ по ссылке -> Читатель»), скопируйте ссылку или File ID.
+4. Вставьте ссылку в файл [`gdrive_links.json`](gdrive_links.json) в поля `serverFileId` / `clientFileId`.
 
 ---
 
@@ -50,7 +75,7 @@
 
 1. **Некоммерческое использование и цифровое сохранение**: Данный репозиторий является независимым проектом с открытым исходным кодом, созданным исключительно в образовательных и исследовательских целях, а также для сохранения истории разработки видеоигры Rust.
 2. **Отсутствие проприетарных файлов**: В репозитории отсутствуют исполняемые файлы (`.exe`), библиотеки (`.dll`), ресурсы Unity (`.assets`, `.bundle`), карты и прочие материалы, принадлежащие Facepunch Studios Ltd.
-3. **Официальные каналы загрузки**: Все игровые данные загружаются пользователем самостоятельно с серверов компании Valve Corporation через официальные протоколы Steam.
+3. **Официальные каналы загрузки**: Все игровые данные загружаются пользователем самостоятельно с серверов компании Valve Corporation через официальные протоколы Steam или настроенные персональные хранилища.
 4. **Торговые марки**: «Rust», Facepunch Studios и соответствующие логотипы являются зарегистрированными товарными знаками **Facepunch Studios Ltd.** Проект никак не связан и не поддерживается компаниями Facepunch Studios или Valve Corporation.
 </details>
 
@@ -67,7 +92,7 @@
 
 ---
 
-## 🚀 Быстрый старт
+## 🚀 Быстрый старт (SteamCMD)
 
 ### 1. Клонирование репозитория
 ```bash
@@ -141,6 +166,10 @@ powershell -ExecutionPolicy Bypass -File .\download_all_clients_powershell.ps1 -
 ```
 Vanilla_Devblogs/
 ├── devblogs_manifests.json                  # База данных всех манифестов (JSON)
+├── gdrive_links.json                        # Маппинг прямых ссылок Google Drive
+├── download_from_gdrive.ps1                 # Автозагрузчик и авто-распаковщик с Google Drive
+├── download_from_gdrive.bat                 # Запуск загрузки с Google Drive в 1 клик
+├── pack_devblogs_for_upload.ps1             # Утилита упаковки локальных сборок в ZIP для Google Drive
 ├── download_servers.ps1                     # PowerShell-загрузчик серверов через SteamCMD
 ├── download_all_clients_powershell.ps1      # PowerShell-загрузчик клиентов игры
 ├── download_all_servers_steamcmd.bat        # Запуск загрузки серверов в 1 клик
@@ -194,8 +223,8 @@ RustDedicated.exe -batchmode -nographics ^
 ## ❓ Часто задаваемые вопросы (FAQ)
 
 <details>
-<summary><b>1. Почему серверы скачиваются без логина, а клиенты требуют аккаунт?</b></summary>
-Valve разрешает анонимную загрузку серверных депотов Rust (AppID <code>258550</code>). Клиентские депоты (AppID <code>252490</code>) защищены Steam DRM и требуют лицензию Rust на аккаунте.
+<summary><b>1. В чем разница между загрузкой с Google Drive и SteamCMD?</b></summary>
+Google Drive скачивает готовые, полностью собранные архивы за пару минут без ввода паролей и ожидания SteamCMD. SteamCMD скачивает оригинальные депоты напрямую из хранилища Valve.
 </details>
 
 <details>

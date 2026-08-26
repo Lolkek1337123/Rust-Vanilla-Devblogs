@@ -54,6 +54,8 @@ steamcmd/
 tools/
 DepotDownloader/
 .depotDownloader/
+_gdrive_uploads/
+temp_*.zip
 *.zip
 *.tar.gz
 *.7z
