@@ -1,5 +1,6 @@
 ﻿param(
     [int]$DevblogId = 0,
+    [switch]$All,
     [string]$OutputDir = ""
 )
 
@@ -24,8 +25,18 @@ function Pack-FolderToZip($sourceFolder, $outputZip) {
         return $false
     }
     
+    # Check if archive already exists and is non-empty
+    if (Test-Path $outputZip) {
+        $existingSize = (Get-Item $outputZip).Length
+        if ($existingSize -gt 10485760) { # > 10MB
+            $sizeMb = [math]::Round($existingSize / 1MB, 2)
+            Write-Host "  [SKIP] Archive already exists ($sizeMb MB): $outputZip" -ForegroundColor Yellow
+            return $true
+        }
+        Remove-Item -Path $outputZip -Force
+    }
+
     Write-Host "  -> Creating archive: $outputZip..." -ForegroundColor Cyan
-    if (Test-Path $outputZip) { Remove-Item -Path $outputZip -Force }
 
     if ($tar) {
         & $tar -a -cf "$outputZip" -C "$sourceFolder" .
@@ -51,6 +62,8 @@ Write-Host ""
 $targets = @()
 if ($DevblogId -gt 0) {
     $targets = $devblogs | Where-Object { $_.id -eq $DevblogId }
+} elseif ($All -or $DevblogId -eq -1) {
+    $targets = $devblogs
 } else {
     Write-Host "Select packaging option:" -ForegroundColor Yellow
     Write-Host " [0] Pack ALL devblogs" -ForegroundColor White
