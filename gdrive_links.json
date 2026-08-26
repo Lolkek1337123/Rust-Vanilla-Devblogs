@@ -1,188 +1,136 @@
 {
   "gdriveFolderUrl": "https://drive.google.com/drive/folders/YOUR_GDRIVE_SHARED_FOLDER_ID",
-  "description": "Прямые ссылки на упакованные архивы серверов и клиентов Rust Devblog на Google Drive",
+  "description": "Прямые ссылки на полные архивы (Сервер + Клиент в одном ZIP) Rust Devblogs на Google Drive",
   "devblogs": {
     "65": {
-      "title": "Devblog 65 (v1288)",
-      "serverFileId": "",
-      "clientFileId": "",
-      "serverSizeMB": 820,
-      "clientSizeMB": 2450
+      "title": "Devblog 65 (v1288 - Old Blueprints)",
+      "fileId": "",
+      "approxSizeMB": 3200
     },
     "133": {
       "title": "Devblog 133 (v1337 - XP System)",
-      "serverFileId": "",
-      "clientFileId": "",
-      "serverSizeMB": 1250,
-      "clientSizeMB": 3800
+      "fileId": "",
+      "approxSizeMB": 5000
     },
     "177": {
       "title": "Devblog 177 (v1478 - Workbenches)",
-      "serverFileId": "",
-      "clientFileId": "",
-      "serverSizeMB": 1600,
-      "clientSizeMB": 4900
+      "fileId": "",
+      "approxSizeMB": 6500
     },
     "196": {
       "title": "Devblog 196 (v1550 - Early Access Exit)",
-      "serverFileId": "",
-      "clientFileId": "",
-      "serverSizeMB": 1850,
-      "clientSizeMB": 5600
+      "fileId": "",
+      "approxSizeMB": 7400
     },
     "199": {
       "title": "Devblog 199 (v1563 - CH-47 Chinook)",
-      "serverFileId": "",
-      "clientFileId": "",
-      "serverSizeMB": 1920,
-      "clientSizeMB": 5850
+      "fileId": "",
+      "approxSizeMB": 7700
     },
     "210": {
       "title": "Devblog 210 (v1617 - Compound & Boats)",
-      "serverFileId": "",
-      "clientFileId": "",
-      "serverSizeMB": 2100,
-      "clientSizeMB": 6400
+      "fileId": "",
+      "approxSizeMB": 8500
     },
     "217": {
       "title": "Devblog 217 (v1655 - Cargo Ship)",
-      "serverFileId": "",
-      "clientFileId": "",
-      "serverSizeMB": 2250,
-      "clientSizeMB": 6800
+      "fileId": "",
+      "approxSizeMB": 9000
     },
     "220": {
       "title": "Devblog 220 (v1672 - Electricity)",
-      "serverFileId": "",
-      "clientFileId": "",
-      "serverSizeMB": 2400,
-      "clientSizeMB": 7100
+      "fileId": "",
+      "approxSizeMB": 9500
     },
     "224": {
       "title": "Devblog 224 (v1694 - Minicopter & Oilrig)",
-      "serverFileId": "",
-      "clientFileId": "",
-      "serverSizeMB": 2550,
-      "clientSizeMB": 7450
+      "fileId": "",
+      "approxSizeMB": 10000
     },
     "236": {
       "title": "Devblog 236 (v1775 - Ring Roads)",
-      "serverFileId": "",
-      "clientFileId": "",
-      "serverSizeMB": 2700,
-      "clientSizeMB": 7900
+      "fileId": "",
+      "approxSizeMB": 10600
     },
     "240": {
       "title": "Devblog 240 (v1801 - Modular Cars)",
-      "serverFileId": "",
-      "clientFileId": "",
-      "serverSizeMB": 2850,
-      "clientSizeMB": 8200
+      "fileId": "",
+      "approxSizeMB": 11000
     },
     "247": {
       "title": "Devblog 247 (v1850 - Tech Trees)",
-      "serverFileId": "",
-      "clientFileId": "",
-      "serverSizeMB": 3000,
-      "clientSizeMB": 8700
+      "fileId": "",
+      "approxSizeMB": 11700
     },
     "248": {
       "title": "Devblog 248 (v1858 - Drone Delivery)",
-      "serverFileId": "",
-      "clientFileId": "",
-      "serverSizeMB": 3100,
-      "clientSizeMB": 8900
+      "fileId": "",
+      "approxSizeMB": 12000
     },
     "261": {
       "title": "Devblog 261 (v2285 - Arctic Base)",
-      "serverFileId": "",
-      "clientFileId": "",
-      "serverSizeMB": 3350,
-      "clientSizeMB": 9400
+      "fileId": "",
+      "approxSizeMB": 12700
     },
     "264": {
       "title": "Devblog 264 (v2302 - Recoil Overhaul)",
-      "serverFileId": "",
-      "clientFileId": "",
-      "serverSizeMB": 3400,
-      "clientSizeMB": 9600
+      "fileId": "",
+      "approxSizeMB": 13000
     },
     "265": {
       "title": "Devblog 265 (v2310 - Attack Heli & Trains)",
-      "serverFileId": "",
-      "clientFileId": "",
-      "serverSizeMB": 3500,
-      "clientSizeMB": 9800
+      "fileId": "",
+      "approxSizeMB": 13300
     },
     "266": {
       "title": "Devblog 266 (v2318 - Train Tracks)",
-      "serverFileId": "",
-      "clientFileId": "",
-      "serverSizeMB": 3600,
-      "clientSizeMB": 10100
+      "fileId": "",
+      "approxSizeMB": 13700
     },
     "277": {
       "title": "Devblog 277 (v2392 - Building Skins)",
-      "serverFileId": "",
-      "clientFileId": "",
-      "serverSizeMB": 3750,
-      "clientSizeMB": 10500
+      "fileId": "",
+      "approxSizeMB": 14200
     },
     "280": {
       "title": "Devblog 280 (v2398 - Ferry Terminal & Tugboat)",
-      "serverFileId": "",
-      "clientFileId": "",
-      "serverSizeMB": 3900,
-      "clientSizeMB": 10900
+      "fileId": "",
+      "approxSizeMB": 14800
     },
     "287": {
       "title": "Devblog 287 (v2567 - Dynamic Weather)",
-      "serverFileId": "",
-      "clientFileId": "",
-      "serverSizeMB": 4200,
-      "clientSizeMB": 11800
+      "fileId": "",
+      "approxSizeMB": 16000
     },
     "290": {
       "title": "Devblog 290 (v2570 - Backpacks & Radiation)",
-      "serverFileId": "",
-      "clientFileId": "",
-      "serverSizeMB": 4300,
-      "clientSizeMB": 12100
+      "fileId": "",
+      "approxSizeMB": 16400
     },
     "292": {
       "title": "Devblog 292 (v2574 - Performance)",
-      "serverFileId": "",
-      "clientFileId": "",
-      "serverSizeMB": 4400,
-      "clientSizeMB": 12300
+      "fileId": "",
+      "approxSizeMB": 16700
     },
     "295": {
       "title": "Devblog 295 (v2580 - Physics)",
-      "serverFileId": "",
-      "clientFileId": "",
-      "serverSizeMB": 4500,
-      "clientSizeMB": 12600
+      "fileId": "",
+      "approxSizeMB": 17100
     },
     "297": {
       "title": "Devblog 297 (v2592 - Monuments)",
-      "serverFileId": "",
-      "clientFileId": "",
-      "serverSizeMB": 4650,
-      "clientSizeMB": 12900
+      "fileId": "",
+      "approxSizeMB": 17500
     },
     "299": {
       "title": "Devblog 299 (v2594 - Network Polish)",
-      "serverFileId": "",
-      "clientFileId": "",
-      "serverSizeMB": 4800,
-      "clientSizeMB": 13200
+      "fileId": "",
+      "approxSizeMB": 18000
     },
     "301": {
       "title": "Devblog 301 (v2602 - Stable Archive)",
-      "serverFileId": "",
-      "clientFileId": "",
-      "serverSizeMB": 4950,
-      "clientSizeMB": 13500
+      "fileId": "",
+      "approxSizeMB": 18400
     }
   }
 }

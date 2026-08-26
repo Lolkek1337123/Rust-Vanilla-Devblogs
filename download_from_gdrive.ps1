@@ -1,7 +1,5 @@
 param(
-    [int]$DevblogId = 0,
-    [ValidateSet("server", "client", "both")]
-    [string]$Type = "both"
+    [int]$DevblogId = 0
 )
 
 $BaseDir = $PSScriptRoot
@@ -69,7 +67,7 @@ function Download-FromGDrive($fileId, $destinationZip) {
     $downloaded = 0
     $lastReport = [System.DateTime]::Now
 
-    Write-Host "  -> Загрузка архива..." -ForegroundColor Cyan
+    Write-Host "  -> Загрузка полного архива (Сервер + Клиент)..." -ForegroundColor Cyan
 
     while (($read = $stream.Read($buffer, 0, $buffer.Length)) -gt 0) {
         $fileStream.Write($buffer, 0, $read)
@@ -81,14 +79,14 @@ function Download-FromGDrive($fileId, $destinationZip) {
             if ($totalBytes -and $totalBytes -gt 0) {
                 $totalMb = [math]::Round($totalBytes / 1MB, 2)
                 $percent = [math]::Round(($downloaded / $totalBytes) * 100, 1)
-                Write-Progress -Activity "Загрузка с Google Drive" -Status "$mb MB / $totalMb MB ($percent%)" -PercentComplete $percent
+                Write-Progress -Activity "Загрузка сборки с Google Drive" -Status "$mb MB / $totalMb MB ($percent%)" -PercentComplete $percent
             } else {
-                Write-Progress -Activity "Загрузка с Google Drive" -Status "$mb MB загружено..."
+                Write-Progress -Activity "Загрузка сборки с Google Drive" -Status "$mb MB загружено..."
             }
         }
     }
 
-    Write-Progress -Activity "Загрузка с Google Drive" -Completed
+    Write-Progress -Activity "Загрузка сборки с Google Drive" -Completed
     $fileStream.Flush()
     $fileStream.Close()
     $stream.Close()
@@ -99,7 +97,7 @@ function Download-FromGDrive($fileId, $destinationZip) {
 
 function Extract-Archive($zipFile, $destDir) {
     if (-not (Test-Path $destDir)) { New-Item -ItemType Directory -Force -Path $destDir | Out-Null }
-    Write-Host "  -> Распаковка архива в: $destDir..." -ForegroundColor Cyan
+    Write-Host "  -> Распаковка сборки в: $destDir..." -ForegroundColor Cyan
 
     $tar = Get-Command "tar.exe" -ErrorAction SilentlyContinue
     if ($tar) {
@@ -111,7 +109,7 @@ function Extract-Archive($zipFile, $destDir) {
 }
 
 Write-Host "=====================================================================" -ForegroundColor Cyan
-Write-Host "   Rust Vanilla Devblogs: Загрузчик с Google Drive (1-Click Ready)" -ForegroundColor Cyan
+Write-Host "   Rust Vanilla Devblogs: Загрузчик сборок с Google Drive" -ForegroundColor Cyan
 Write-Host "=====================================================================" -ForegroundColor Cyan
 
 $availableIds = $gdriveData.devblogs.PSObject.Properties | Select-Object -ExpandProperty Name
@@ -143,47 +141,21 @@ Write-Host ""
 Write-Host "Выбран девблог: $($dbInfo.title)" -ForegroundColor Green
 
 $targetDbDir = Join-Path $BaseDir "Rust_Devblog_$DevblogId"
-$serverDir = Join-Path $targetDbDir "server"
-$clientDir = Join-Path $targetDbDir "client"
 
-# 1. Загрузка сервера
-if ($Type -eq "server" -or $Type -eq "both") {
-    $srvId = Extract-FileId $dbInfo.serverFileId
-    if ($srvId) {
-        Write-Host "`n[1/2] Загрузка готового сервера $($dbInfo.title)..." -ForegroundColor Green
-        $tmpZip = Join-Path $BaseDir "temp_server_$DevblogId.zip"
-        $ok = Download-FromGDrive $srvId $tmpZip
-        if ($ok) {
-            Extract-Archive $tmpZip $serverDir
-            Remove-Item -Path $tmpZip -Force -ErrorAction SilentlyContinue
-            Write-Host "  [OK] Сервер $($dbInfo.title) успешно установлен и готов!" -ForegroundColor Green
-        } else {
-            Write-Host "  [!] Не удалось загрузить архив сервера." -ForegroundColor Red
-        }
+$fileId = Extract-FileId $dbInfo.fileId
+if ($fileId) {
+    $tmpZip = Join-Path $BaseDir "temp_devblog_$DevblogId.zip"
+    $ok = Download-FromGDrive $fileId $tmpZip
+    if ($ok) {
+        Extract-Archive $tmpZip $targetDbDir
+        Remove-Item -Path $tmpZip -Force -ErrorAction SilentlyContinue
+        Write-Host "  [OK] Девблог $($dbInfo.title) (Клиент и Сервер) готов к игре!" -ForegroundColor Green
     } else {
-        Write-Host "[INFO] Прямой Google Drive File ID для сервера Devblog $DevblogId пока не заполнен в gdrive_links.json." -ForegroundColor DarkGray
-        Write-Host "Используйте .\download_servers.ps1 для быстрой загрузки через официальный SteamCMD." -ForegroundColor Yellow
+        Write-Host "  [!] Не удалось загрузить архив с Google Drive." -ForegroundColor Red
     }
-}
-
-# 2. Загрузка клиента
-if ($Type -eq "client" -or $Type -eq "both") {
-    $cltId = Extract-FileId $dbInfo.clientFileId
-    if ($cltId) {
-        Write-Host "`n[2/2] Загрузка готового клиента $($dbInfo.title)..." -ForegroundColor Green
-        $tmpZip = Join-Path $BaseDir "temp_client_$DevblogId.zip"
-        $ok = Download-FromGDrive $cltId $tmpZip
-        if ($ok) {
-            Extract-Archive $tmpZip $clientDir
-            Remove-Item -Path $tmpZip -Force -ErrorAction SilentlyContinue
-            Write-Host "  [OK] Клиент $($dbInfo.title) успешно установлен и готов!" -ForegroundColor Green
-        } else {
-            Write-Host "  [!] Не удалось загрузить архив клиента." -ForegroundColor Red
-        }
-    } else {
-        Write-Host "[INFO] Прямой Google Drive File ID для клиента Devblog $DevblogId пока не заполнен в gdrive_links.json." -ForegroundColor DarkGray
-        Write-Host "Используйте .\download_all_clients_powershell.ps1 для загрузки через DepotDownloader." -ForegroundColor Yellow
-    }
+} else {
+    Write-Host "[INFO] Google Drive ссылка для Devblog $DevblogId пока не заполнена в gdrive_links.json." -ForegroundColor DarkGray
+    Write-Host "Вы можете скачать сервер через SteamCMD: .\download_servers.ps1 -DevblogId $DevblogId" -ForegroundColor Yellow
 }
 
 Write-Host ""
